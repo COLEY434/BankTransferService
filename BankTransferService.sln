@@ -5,6 +5,12 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankTransferService.Api", "BankTransferService.Api\BankTransferService.Api.csproj", "{6B44AFAF-DBDC-44E5-929C-FD6F7F84AF61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankTransferService.Core", "BankTransferService.Core\BankTransferService.Core.csproj", "{A783A021-A768-4ABA-9138-3892EB036BE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankTransferService.Infrastructure", "BankTransferService.Infrastructure\BankTransferService.Infrastructure.csproj", "{F91F6D3F-FE48-4108-8723-EA73C989CB9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankTransferService.UnitTest", "BankTransferService.UnitTest\BankTransferService.UnitTest.csproj", "{ED2C044A-30BA-4AE8-BEC4-9DDEEE2C3590}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{6B44AFAF-DBDC-44E5-929C-FD6F7F84AF61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B44AFAF-DBDC-44E5-929C-FD6F7F84AF61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B44AFAF-DBDC-44E5-929C-FD6F7F84AF61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A783A021-A768-4ABA-9138-3892EB036BE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A783A021-A768-4ABA-9138-3892EB036BE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A783A021-A768-4ABA-9138-3892EB036BE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A783A021-A768-4ABA-9138-3892EB036BE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F91F6D3F-FE48-4108-8723-EA73C989CB9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F91F6D3F-FE48-4108-8723-EA73C989CB9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F91F6D3F-FE48-4108-8723-EA73C989CB9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F91F6D3F-FE48-4108-8723-EA73C989CB9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED2C044A-30BA-4AE8-BEC4-9DDEEE2C3590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED2C044A-30BA-4AE8-BEC4-9DDEEE2C3590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED2C044A-30BA-4AE8-BEC4-9DDEEE2C3590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED2C044A-30BA-4AE8-BEC4-9DDEEE2C3590}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

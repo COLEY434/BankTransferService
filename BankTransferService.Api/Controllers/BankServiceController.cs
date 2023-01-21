@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using BankTransferService.Core.Intefaces.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BankTransferService.Api.Controllers
@@ -7,15 +8,24 @@ namespace BankTransferService.Api.Controllers
     [ApiController]
     public class BankServiceController : ControllerBase
     {
-        public BankServiceController()
-        {
+        private readonly IBankTransferService _bankTransferService;
 
+        public BankServiceController(IBankTransferService bankTransferService)
+        {
+            _bankTransferService = bankTransferService;
         }
 
         [HttpGet("banks")]
-        public async Task<IActionResult> GetBanks([FromQuery] string provider)
+        public async Task<IActionResult> GetBanks([FromQuery] string? provider)
         {
-            return Ok();
+            var result = await _bankTransferService.GetBanks(provider);
+
+            if(result.Code != StatusCodes.Status200OK)
+            {
+                return StatusCode(result.Code, result);
+            }
+
+            return Ok(result);
         }
     }
 

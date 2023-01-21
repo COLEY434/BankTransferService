@@ -1,3 +1,5 @@
+using BankTransferService.Core.Intefaces.Services;
+using BankTransferService.Core.Services;
 using BankTransferService.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,7 +13,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BankTransferServiceContext>(options =>
   options.UseSqlServer(builder.Configuration.GetConnectionString("BankTranaferServiceContext")));
+builder.Services.AddHttpClient();
 
+builder.Services.AddScoped<IFlutterwaveService, FlutterwaveService>();
+builder.Services.AddScoped<IBankTransferService, BankTransferServices>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
